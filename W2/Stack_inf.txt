@@ -1,0 +1,11 @@
+stack layout: argc - argv[0-n] - 0 - env[0-n] 0 - data 
+intstack[0] = int argc
+intstack[1 till argc] = relative pointers(ints) to the data
+intstack[argc+1] = 0
+intstack[argc+2...+n] = relative pointers(ints) to envirorment
+intstack[argc+n+1]= 0 
+
+*argv[i] is byte offest from start of stack which points to its string when added to the stack pointer.
+So when removing pointers from artv[i-n] these values should be subtracted by the byte size of a pointer (ie. 40)
+
+stack + *argv[i] = char* to argv i

@@ -1,0 +1,17 @@
+kernel: 
+- rt_data file
+- proc.h aangepast
+- config.h aangepast
+- system.c: map SYS_SETRT, do_setrt): L265
+- added system/do_setrt
+- system.h prototype
+- system/makefile
+? wfnp.o ?
+
+other:
+- com.h added sys_setrt
+- skipped new mesage type
+? /usr/src/lib/syslib/do_setrt.c ? added to makefile
+- /usr/src/include.minix/syslib.h: prootype
+? call from pm/exec.c ?
+
